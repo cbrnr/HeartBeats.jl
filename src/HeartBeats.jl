@@ -50,8 +50,8 @@ function detect_heartbeats(ecg::AbstractVector, fs::Real)
     rr_intervals = zeros(signal_len ÷ refractory_samples)
     num_peaks_found = 0
 
-    peak_index = -refractory_samples + 1
-    previous_peak_index = -refractory_samples + 1
+    peak_index = -refractory_samples + 2
+    previous_peak_index = -refractory_samples + 2
     RR_missed_limit = nothing
     RR_low_limit = nothing
     RR_high_limit = nothing
